@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Informações Gerais</h1>
+  <ul>
+    {% for informacoesgerais in object_list %}
+      <li><a href="{% url 'agro_lavouras_db_app:informacoes_gerais-detail' informacoesgerais.pk %}">{{ informacoesgerais.variavel }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

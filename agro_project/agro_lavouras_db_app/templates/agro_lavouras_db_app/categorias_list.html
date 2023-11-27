@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Categorias</h1>
+  <ul>
+    {% for categoria in object_list %}
+      <li><a href="{% url 'agro_lavouras_db_app:categorias-detail' categoria.pk %}">{{ categoria.nome }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

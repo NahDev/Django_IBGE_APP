@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Detalhes das Informações Gerais</h1>
+  <p><strong>Variável:</strong> {{ object.variavel }}</p>
+  <p><strong>Unidade:</strong> {{ object.unidade }}</p>
+  <!-- Outros campos das informações gerais, se houver -->
+  <a href="{% url 'agro_lavouras_db_app:informacoes_gerais-list' %}">Voltar para a lista de informações gerais</a>
+{% endblock %}

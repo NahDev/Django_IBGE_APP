@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Aplicativo</title>
+</head>
+<body>
+    <header>
+        <h1>Seu Aplicativo</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'agro_lavouras_db_app:categorias-list' %}">Categorias</a></li>
+                <li><a href="{% url 'agro_lavouras_db_app:informacoes_gerais-list' %}">Informações Gerais</a></li>
+                <li><a href="{% url 'agro_lavouras_db_app:serie_detalhes-list' %}">Série de Detalhes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

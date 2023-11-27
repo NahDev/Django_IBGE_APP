@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Detalhes da Série de Detalhes</h1>
+  <p><strong>Localidade:</strong> {{ object.localidade_nome }}</p>
+  <p><strong>Ano:</strong> {{ object.serie_ano }}</p>
+  <p><strong>Valor:</strong> {{ object.serie_valor }}</p>
+  <!-- Outros campos da série de detalhes, se houver -->
+  <a href="{% url 'agro_lavouras_db_app:serie_detalhes-list' %}">Voltar para a lista de séries de detalhes</a>
+{% endblock %}
